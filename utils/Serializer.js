@@ -14,6 +14,11 @@ export class Serializer {
     read(count) {
         return this.Data.slice(this.tell, this.seek(count));
     }
+    readInt64() {
+        let int = this.Data.readBigInt64LE(this.tell);
+        this.seek(8);
+        return int;
+    }
     readInt32() {
         let int = this.Data.readInt32LE(this.tell);
         this.seek(4);
@@ -40,6 +45,9 @@ export class Serializer {
     }
     write(buf) {
         this._offset += buf.copy(this.Data, this.tell);
+    }
+    writeInt64(num) {
+        this._offset = this.Data.writeBigInt64LE(num, this.tell);
     }
     writeInt32(num) {
         this._offset = this.Data.writeInt32LE(num, this.tell);

@@ -5,6 +5,7 @@ import {
     EnumProperty,
     FloatProperty,
     IntProperty,
+    Int64Property,
     ObjectProperty,
     SoftObjectProperty,
     StrProperty,
@@ -24,6 +25,7 @@ PropertyFactory.Properties['BoolProperty'] = BoolProperty;
 PropertyFactory.Properties['EnumProperty'] = EnumProperty;
 PropertyFactory.Properties['FloatProperty'] = FloatProperty;
 PropertyFactory.Properties['IntProperty'] = IntProperty;
+PropertyFactory.Properties['Int64Property'] = Int64Property;
 PropertyFactory.Properties['ObjectProperty'] = ObjectProperty;
 PropertyFactory.Properties['SoftObjectProperty'] = SoftObjectProperty;
 PropertyFactory.Properties['StrProperty'] = StrProperty;
